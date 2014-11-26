@@ -18,11 +18,6 @@ module Lotus
         (attr = @attributes[name]) and attr.value
       end
 
-      def set(name, value)
-        attr = @attributes[name]
-        attr.value = value if attr
-      end
-
       def dup
         Utils::Hash.new(to_h).deep_dup
       end
